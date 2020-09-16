@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Open+Sans:wght@300&display=swap");
+/* UTULİTİES*/
+.bg-dark {
+  background-color: #14151a;
+}
+.bg-light {
+  background-color: #fefefe;
+}
+
+.ml-2 {
+  margin-left: 2rem;
+}
+
+.btn {
+  background-color: #fefefe;
+  color: #e51515;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+  letter-spacing: 2px;
+  transition: all 5s;
+}
+.btn:hover {
+  background-color: #e51515;
+  color: #fefefe;
+}
+.btn:hover-primary {
+  background: #e51515;
+  color: #fefefe;
+}
+.btn:hover-primary:hover {
+  color: #e51515;
+  background-color: #fefefe;
+}
