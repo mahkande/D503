@@ -23,3 +23,25 @@
     }
   }
 }
+
+/** RATİNG**/
+
+.raiting {
+  position: absolute;
+  clip-path: polygon(100% 0, 100% 100%, 47% 66%, 0 100%, 0 0);
+  left: 1rem;
+  width: 3rem;
+  height: 3rem;
+  background: $light-color;
+  opacity: 0;
+  z-index: 100;
+  line-height: 3rem;
+  font-size: 1.4rem;
+  font-family: $primary-font;
+  text-align: center;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}

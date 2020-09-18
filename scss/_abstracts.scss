@@ -8,6 +8,7 @@ $date-color: #ffb320;
 $comment-color: #08abbd;
 $gray-color: #9f9f9f;
 $light-color: #fefefe;
+$general-transition: all .5s;
 
 /* UTULİTİES*/
 
@@ -26,11 +27,18 @@ $light-color: #fefefe;
   }
 }
 
+.text-light {
+  color: $light-color;
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
 /* MİXİNG*/
 
-@mixin flex-display($display, $align-items, $justify-content ) {
+@mixin flex-display($display, $align-items, $justify-content) {
   display: $display;
   align-items: $align-items;
   justify-content: $justify-content;
-  
 }
