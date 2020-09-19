@@ -45,3 +45,136 @@
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
 }
+
+/**REVİEWS*/
+
+.review {
+  padding: 5rem;
+  font-style: 1.3rem;
+  line-height: 1.8rem;
+  margin-left: 10rem;
+  border-left: 1px solid $primary-color;
+  border-bottom: 1px solid $primary-color;
+  transform: skew(-28deg);
+
+  & > * {
+    transform: skew(28deg);
+    -webkit-transform: skew(28deg);
+    -moz-transform: skew(28deg);
+    -ms-transform: skew(28deg);
+    -o-transform: skew(28deg);
+  }
+
+  &-tags {
+    font-size: 1.5rem;
+    color: $light-color;
+    text-transform: uppercase;
+  }
+
+  &-text {
+    margin: 1rem 0;
+  }
+
+  &-title {
+    padding-bottom: 1rem;
+  }
+
+  &-user {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 8rem;
+      margin-right: 3rem;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+
+    &-detail {
+      font-family: $primary-font;
+      margin-right: 3rem;
+
+      .review-user-name {
+        color: $primary-color;
+      }
+      .review-user-date {
+        color: $date-color;
+      }
+    }
+
+    &-platform {
+      :not(:last-child) {
+        color: $primary-color;
+      }
+
+      .fab {
+        margin: 0 1rem;
+      }
+    }
+    &-rating {
+      margin-left: auto;
+    }
+    .checked {
+      color: $primary-color;
+    }
+  }
+}
+
+/*CARDS*/
+
+.card {
+  height: 40rem;
+  perspective: 1000px;
+
+  &-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition: all 1s;
+  }
+  .card-front {
+    background-color: $primary-color;
+  }
+  .card-back {
+    background-color: $secondary-color;
+    transform: rotateY(180deg);
+    display: table;
+
+    &-content {
+      display: table-cell;
+      vertical-align: middle;
+
+      p {
+        font-size: 1.8rem;
+      }
+
+      a {
+        transition: $general-transition;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  &:hover .card-front {
+    transform: rotateY(180deg);
+  }
+  &:hover .card-back {
+    transform: none;
+  }
+}

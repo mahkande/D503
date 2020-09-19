@@ -8,7 +8,7 @@ $date-color: #ffb320;
 $comment-color: #08abbd;
 $gray-color: #9f9f9f;
 $light-color: #fefefe;
-$general-transition: all .5s;
+$general-transition: all 0.5s;
 
 /* UTULİTİES*/
 
@@ -27,12 +27,22 @@ $general-transition: all .5s;
   }
 }
 
+.m {
+  &-1 {
+    margin: 1rem;
+  }
+}
+
 .text-light {
   color: $light-color;
 }
 
 .text-primary {
   color: $primary-color;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* MİXİNG*/
