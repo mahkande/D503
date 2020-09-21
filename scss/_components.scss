@@ -8,6 +8,10 @@
   letter-spacing: 2px;
   transition: all 0.5s;
 
+  @include media(medium) {
+    padding: 0.3rem 1rem;
+  }
+
   &:hover {
     background-color: $primary-color;
     color: $light-color;
@@ -57,12 +61,21 @@
   border-bottom: 1px solid $primary-color;
   transform: skew(-28deg);
 
+  @include media(large) {
+    transform: skew(0deg);
+    border: none;
+    margin-left: 0;
+  }
+
   & > * {
     transform: skew(28deg);
     -webkit-transform: skew(28deg);
     -moz-transform: skew(28deg);
     -ms-transform: skew(28deg);
     -o-transform: skew(28deg);
+    @include media(large) {
+      transform: skew(0deg);
+    }
   }
 
   &-tags {
@@ -82,6 +95,10 @@
   &-user {
     display: flex;
     align-items: center;
+
+    @include media(small) {
+      flex-direction: column;
+    }
 
     img {
       width: 8rem;
@@ -116,6 +133,9 @@
     }
     &-rating {
       margin-left: auto;
+      @include media(small) {
+        margin-left: 0;
+      }
     }
     .checked {
       color: $primary-color;
@@ -128,6 +148,17 @@
 .card {
   height: 40rem;
   perspective: 1000px;
+
+  @include media(large) {
+    height: 35rem;
+  }
+
+  @include media(medium) {
+    height: 30rem;
+  }
+  @include media(small) {
+    height: 25rem;
+  }
 
   &-inner {
     position: relative;
